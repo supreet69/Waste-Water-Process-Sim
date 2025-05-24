@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WWTP Simulation</title>
+</head>
+<body>
+    <h1>WWTP Simulation</h1>
+    <form method="post">
+        Flow rate (m³/d): <input type="number" name="flow" step="any"><br>
+        NH₄⁺ Concentration (mg/L): <input type="number" name="s_nh4" step="any"><br>
+        NO₃⁻ Concentration (mg/L): <input type="number" name="s_no3" step="any"><br>
+        <input type="submit" value="Run Simulation">
+    </form>
+
+    {% if plot_url %}
+        <h2>Result Plot:</h2>
+        <img src="{{ plot_url }}">
+    {% endif %}
+</body>
+</html>
